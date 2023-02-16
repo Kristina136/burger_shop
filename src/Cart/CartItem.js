@@ -1,14 +1,21 @@
 import { useDispatch } from "react-redux";
 import { removeItemFromCart } from "../redux/cartSlice";
 import data from "./../Dishes/data";
+import swal from 'sweetalert';
 
 
 const CartItem =({cartItem})=>{
 
-const dishes = data.find(item=>item.id===cartItem.dishId)
-const dispatch =useDispatch()
+const dishes = data.find(item=>item.id===cartItem.dishId);
+const dispatch =useDispatch();
+const remove=()=>{
+    dispatch(removeItemFromCart({cartItemId:cartItem.id}));
+    swal("Item(s) is removed!", "Go back to the store!", "success");
+}
+
+
     return(
-        <div onClick={()=> dispatch(removeItemFromCart({cartItemId:cartItem.id}))} className="cartContainer">
+        <div onClick={remove} className="cartContainer">
              <p> {dishes.name} </p>
             <p> {cartItem.quantity} portions</p>
             <p> {dishes.price*cartItem.quantity} </p>
