@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { removeItemFromCart } from "../redux/cartSlice";
 import data from "./../Dishes/data";
-import img from "./img.png";
+
 
 const CartItem =({cartItem})=>{
 
