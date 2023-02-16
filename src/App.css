@@ -6,22 +6,21 @@
   body{
     background-color: black;
     color: aliceblue;
-    font-size: 30px;
+   
+  }
+  span{
+     font-size: 30px;
   }
   .container{
     background-color: rgba(249, 190, 190, 0.5);
     padding: 20px;
   }
   .img{
-    width: 700px;
+    width: 500px;
   }
   .imgCart{
     width: 200px;
     border-radius: 50%;
-  }
-  .delete{
-    width: 50px;
-    margin-top: 30px;
   }
   .cart{
     width: 100px;
@@ -32,7 +31,6 @@
   .cartContainer{
     background-color:  rgba(246, 223, 223, 0.5);
   }
-  
   .categoryButton{
     cursor: pointer;
     margin: 5px;
@@ -55,4 +53,31 @@
     background-color: #fdeb6b;
     margin-top: 40px;
     margin-left: 10px;
+  }
+
+ 
+  @media all and (max-width:500px){
+    html, body{
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    .app{
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      flex-direction: column;
+      width: 100vw;
+      }
+      .img{
+        width:350px;
+      }
+      p, h1, h2, button {
+        font-size: 20px;
+      }
+      .cart{
+        width: 50px;
+      }
+      .imgCart{
+        width: 150px;
+      }
   }
